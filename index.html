@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Restaurant Menu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            color: white;
+        }
+
+        
+        .raleway-<uniquifier> {
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+        }
+
+        .bungee-spice-regular {
+        font-family: "Bungee Spice", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+        
+        .menu-container {
+            width: 210mm; /* A4 width */
+            height: 297mm; /* A4 height */
+            margin: 0 auto;
+            background-color: #222;
+            padding: 10mm;
+            box-sizing: border-box;
+        }
+        
+        .restaurant-name {
+            text-align: center;
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        
+        .contact {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #E0D100;
+            font-size: 0.9rem;
+        }
+        
+        .menu-section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            background-color: transparent;
+            color: #E0D100;
+            font-size: 1.3rem;
+            font-weight: bold;
+            padding: 5px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            text-align: left;
+            border-bottom: 2px solid #E0D100;
+        }
+        
+        .menu-items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .menu-item {
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .item-name {
+            font-weight: bold;
+            color: white;
+        }
+        
+        .item-description {
+            font-size: 0.8rem;
+            color: #ccc;
+            margin-top: 2px;
+        }
+        
+        .item-price {
+            color: #E0D100;
+            font-weight: bold;
+            min-width: 60px;
+            text-align: right;
+        }
+        
+        .menu-images {
+            display: flex;
+            justify-content: space-around;
+            margin: 15px 0;
+        }
+        
+        .menu-image {
+            width: 80px;
+            height: 80px;
+            background-color: #444;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+        }
+        
+        .columns-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .address {
+            text-align: center;
+            margin-top: 20px;
+            color: #E0D100;
+            font-weight: bold;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .delivery {
+            text-align: center;
+            color: #E0D100;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .payment {
+            text-align: center;
+            color: #E0D100;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        
+        @media print {
+            body {
+                background-color: transparent;
+            }
+            .menu-container {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="restaurant-name bungee-spice-regular">ESTAMBUL II</div>
+        <div class="contact">Tel: 123 456 789 / 987 654 321</div>
+        
+        <div class="menu-section">
+            <div class="section-title">DURUM - LAHMACUM</div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">1. DÖNER KEBAB DE POLLO</div>
+                        <div class="item-description">Ternera o pollo, lechuga, tomate, cebolla y pan</div>
+                    </div>
+                    <div class="item-price">5,30 €</div>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">2. DÖNER KEBAB SOLO CARNE</div>
+                        <div class="item-description">Ternera o pollo, salsa y pan</div>
+                    </div>
+                    <div class="item-price">4,50 €</div>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">3. DÖNER KEBAB ESTAMBUL</div>
+                        <div class="item-description">Ternera o pollo, patatas, salsa y pan</div>
+                    </div>
+                    <div class="item-price">6,00 €</div>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">4. DURUM</div>
+                        <div class="item-description">Ternera o pollo, lechuga, tomate, cebolla y pan</div>
+                    </div>
+                    <div class="item-price">6,50 €</div>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">5. DURUM SOLO CARNE</div>
+                        <div class="item-description">Ternera o pollo, salsa y pan</div>
+                    </div>
+                    <div class="item-price">6,50 €</div>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">6. DURUM ESTAMBUL</div>
+                        <div class="item-description">Ternera o pollo, patatas, salsa y pan</div>
+                    </div>
+                    <div class="item-price">7,00 €</div>
+                </div>
+            </div>
+            
+            <div class="menu-images">
+                <div class="menu-image">     <img src="./kebab.jpg" width="auto" height="100px"/></div>
+                <div class="menu-image">
+                    <img src="./durum.jpg" width="auto" height="100px"/>
+                </div>
+                <div class="menu-image">     <img src="./pizza.jpg" width="auto" height="100px"/></div>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <div class="section-title">PIZZAS</div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">1. MARGARITA</div>
+                        <div class="item-description">Mozzarella, orégano y tomate</div>
+                    </div>
+                    <div class="item-price">7,00 €</div>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">2. HAWAI</div>
+                        <div class="item-description">Mozzarella, tomate, orégano, jamón y piña</div>
+                    </div>
+                    <div class="item-price">8,00 €</div>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">3. CAPRICHOSA</div>
+                        <div class="item-description">Mozzarella, tomate, orégano, champiñones</div>
+                    </div>
+                    <div class="item-price">8,00 €</div>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">4. TONNO</div>
+                        <div class="item-description">Mozzarella, tomate, orégano, atún, cebolla</div>
+                    </div>
+                    <div class="item-price">8,00 €</div>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">5. MEAT FEAST</div>
+                        <div class="item-description">Mozzarella, carne picada de ternera y pollo</div>
+                    </div>
+                    <div class="item-price">8,00 €</div>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">6. VEGETARIANA</div>
+                        <div class="item-description">Mozzarella, tomate, orégano, pimiento, maíz</div>
+                    </div>
+                    <div class="item-price">8,00 €</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <div class="section-title">ENSALADAS</div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">1. VERDE</div>
+                        <div class="item-description">Lechuga, tomate, maíz, cebolla, aceitunas</div>
+                    </div>
+                    <div class="item-price">3,00 €</div>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">2. ESPECIAL</div>
+                        <div class="item-description">Lechuga, tomate, maíz, pollo, espárragos</div>
+                    </div>
+                    <div class="item-price">4,00 €</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <div class="section-title">RACIONES</div>
+            <div class="columns-3">
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">1. HAMBURGUESA</div>
+                        <div class="item-description">+ patatas fritas + refresco</div>
+                    </div>
+                    <div class="item-price">4,00 €</div>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">2. ALITAS</div>
+                        <div class="item-description">+ patatas fritas + refresco</div>
+                    </div>
+                    <div class="item-price">4,00 €</div>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">3. NUGGETS</div>
+                        <div class="item-description">+ patatas fritas + refresco</div>
+                    </div>
+                    <div class="item-price">4,00 €</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <div class="section-title">POLLO ASADO</div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">1. 1/2 POLLO</div>
+                        <div class="item-description">+ patatas fritas + ensalada</div>
+                    </div>
+                    <div class="item-price">6,00 €</div>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">2. POLLO ENTERO</div>
+                        <div class="item-description">+ patatas fritas + ensalada</div>
+                    </div>
+                    <div class="item-price">11,00 €</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="address">
+            Estambul ll doner kebab, Calle Juan Buscan, Logrono
+        </div>
+        
+        <div class="footer">
+            <div class="delivery">
+                SERVICIO A DOMICILIO<br>
+                Pedido mínimo 8,00 €<br>
+                Zona centro +1,00€ de envío
+            </div>
+            <div class="payment">
+                COBRAMOS CON BIZUM Y TARJETA
+            </div>
+        </div>
+    </div>
+</body>
+</html>
